@@ -35,7 +35,8 @@ public class SolrjService
      * 新增数据到solr服务
      * 
      * @param foo
-     * @throws Exception
+     * @throws Exception ,在这里修改了,添加到solr服务器
+     * 
      */
     public void add(Foo foo) throws Exception
     {
