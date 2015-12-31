@@ -18,7 +18,7 @@ import cn.fbi.solrj.pojo.Item;
  * @author jemond
  * @date 2015年12月31日 下午5:52:17
  * @see
- * @since 1.0
+ * @since 1.0  佛挡杀佛
  */
 public class SolrjService
 {
