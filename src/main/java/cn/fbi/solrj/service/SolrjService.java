@@ -11,6 +11,15 @@ import org.apache.solr.client.solrj.response.QueryResponse;
 import cn.fbi.solrj.pojo.Foo;
 import cn.fbi.solrj.pojo.Item;
 
+/***
+ * 简介：
+ *
+ * 描述：
+ * @author jemond
+ * @date 2015年12月31日 下午5:52:17
+ * @see
+ * @since 1.0
+ */
 public class SolrjService
 {
 
@@ -34,12 +43,33 @@ public class SolrjService
         this.httpSolrServer.commit(); // 提交
     }
 
+    /***
+     * 简介：
+     * 
+     * @autthor jemond
+     * @date 2015年12月31日 下午5:52:28
+     * @param ids
+     * @throws Exception
+     * @since 1.0
+     */
     public void delete(List<String> ids) throws Exception
     {
         this.httpSolrServer.deleteById(ids);
         this.httpSolrServer.commit(); // 提交
     }
 
+    /****
+     * 简介：
+     * 
+     * @autthor jemond
+     * @date 2015年12月31日 下午5:52:36
+     * @param keywords
+     * @param page
+     * @param rows
+     * @return
+     * @throws Exception
+     * @since 1.0
+     */
     public List<Item> search(String keywords, Integer page, Integer rows)
             throws Exception
     {
