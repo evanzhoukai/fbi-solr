@@ -8,7 +8,6 @@ import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.impl.HttpSolrServer;
 import org.apache.solr.client.solrj.response.QueryResponse;
 
-import cn.fbi.solrj.pojo.Foo;
 import cn.fbi.solrj.pojo.Item;
 
 /***
@@ -18,7 +17,7 @@ import cn.fbi.solrj.pojo.Item;
  * @author jemond
  * @date 2015年12月31日 下午5:52:17
  * @see
- * @since 1.0  佛挡杀佛
+ * @since 1.0 佛挡杀佛
  */
 public class SolrjService
 {
@@ -38,7 +37,7 @@ public class SolrjService
      * @throws Exception ,在这里修改了,添加到solr服务器
      * 
      */
-    public void add(Foo foo) throws Exception
+    public void add(Item foo) throws Exception
     {
         this.httpSolrServer.addBean(foo); // 添加数据到solr服务器
         this.httpSolrServer.commit(); // 提交
@@ -56,6 +55,12 @@ public class SolrjService
     public void delete(List<String> ids) throws Exception
     {
         this.httpSolrServer.deleteById(ids);
+        this.httpSolrServer.commit(); // 提交
+    }
+
+    public void delete(String id) throws Exception
+    {
+        this.httpSolrServer.deleteById(id);
         this.httpSolrServer.commit(); // 提交
     }
 

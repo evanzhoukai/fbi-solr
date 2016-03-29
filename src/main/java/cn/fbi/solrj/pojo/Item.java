@@ -14,21 +14,24 @@ public class Item implements java.io.Serializable
      */
     private static final long serialVersionUID = 1L;
 
-    // 自增id
+    /***
+     * 自增id
+     * 
+     */
     @Field("id")
     private Long id;
-
-    /**
-     * 作品名称
-     */
-    @Field("name")
-    private String name;
 
     /**
      * 作品code
      */
     @Field("asset_code")
     private String assetCode;
+
+    /**
+     * 作品名称
+     */
+    @Field("name")
+    private String name;
 
     /**
      * 别名
@@ -55,70 +58,28 @@ public class Item implements java.io.Serializable
     private String author;
 
     /**
-     * 演播
-     */
-    @Field("actor")
-    private String actor;
-
-    /**
-     * 集数
-     */
-    @Field("story_sets")
-    private Long storySets;
-
-    /**
-     * 导演
-     */
-    @Field("direcctors")
-    private String directors;
-
-    /**
-     * 角色
-     */
-    @Field("role")
-    private String role;
-
-    /**
-     * 配音
-     */
-    @Field("dub")
-    private String dub;
-
-    /**
-     * 出版社
-     */
-    @Field("publisher")
-    private String publisher;
-
-    /**
      * 作曲
      */
     @Field("composer")
     private String composer;
 
     /**
-     * 出版时间
+     * 演播
      */
-    @Field("productionDateString")
-    private String productionDateString;
+    @Field("actor")
+    private String actor;
 
     /**
-     * 出版公司
+     * 导演
      */
-    @Field("productionCompany")
-    private String productionCompany;
+    @Field("directors")
+    private String directors;
 
     /**
-     * 公映许可证号
+     * 演员
      */
-    @Field("permitCode")
-    private String permitCode;
-
-    /**
-     * 编剧
-     */
-    @Field("screenwriter")
-    private String screenwriter;
+    @Field("actors")
+    private String actors;
 
     /**
      * 制片人
@@ -127,28 +88,52 @@ public class Item implements java.io.Serializable
     private String producer;
 
     /**
-     * 集数
+     * 监制
      */
-    @Field("mov_sets")
-    private Long movSets;
+    @Field("director")
+    private String director;
+
+    /**
+     * 编剧
+     */
+    @Field("screenwriter")
+    private String screenwriter;
+
+    /**
+     * 配音
+     */
+    @Field("dub")
+    private String dub;
+
+    /**
+     * 角色
+     */
+    @Field("role")
+    private String role;
+
+    /**
+     * 主持人
+     */
+    @Field("compere")
+    private String compere;
+
+    /***
+     * 嘉宾
+     */
+    @Field("guest")
+    private String guest;
+
+    /**
+     * 出版社
+     */
+    @Field("publisher")
+    private String publisher;
 
     /**
      * 网络播出平台
      */
-    @Field("playOnline")
+    @Field("play_online")
     private String playOnline;
-
-    /**
-     * 发行时间
-     */
-    @Field("publishTime")
-    private String publishTime;
-
-    /**
-     * 歌词
-     */
-    @Field("lyric")
-    private String lyric;
 
     /**
      * 唱片
@@ -176,13 +161,6 @@ public class Item implements java.io.Serializable
     private String asIsrc;
 
     /**
-     * 来源
-     * 
-     */
-    @Field("source")
-    private String source;
-
-    /**
      * 操作人
      */
     @Field("operate")
@@ -194,37 +172,6 @@ public class Item implements java.io.Serializable
     @Field("worktype")
     private String worktype;
 
-    /**
-     * 图片
-     */
-    @Field("images")
-    private String images;
-
-    public String getImages()
-    {
-        return images;
-    }
-
-    public void setImages(String images)
-    {
-        this.images = images;
-    }
-
-    public String getWorktype()
-    {
-        return worktype;
-    }
-
-    public void setWorktype(String worktype)
-    {
-        this.worktype = worktype;
-    }
-
-    public static long getSerialversionuid()
-    {
-        return serialVersionUID;
-    }
-
     public Long getId()
     {
         return id;
@@ -235,16 +182,6 @@ public class Item implements java.io.Serializable
         this.id = id;
     }
 
-    public String getName()
-    {
-        return name;
-    }
-
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-
     public String getAssetCode()
     {
         return assetCode;
@@ -253,6 +190,16 @@ public class Item implements java.io.Serializable
     public void setAssetCode(String assetCode)
     {
         this.assetCode = assetCode;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
     }
 
     public String getAsName()
@@ -295,6 +242,16 @@ public class Item implements java.io.Serializable
         this.author = author;
     }
 
+    public String getComposer()
+    {
+        return composer;
+    }
+
+    public void setComposer(String composer)
+    {
+        this.composer = composer;
+    }
+
     public String getActor()
     {
         return actor;
@@ -303,16 +260,6 @@ public class Item implements java.io.Serializable
     public void setActor(String actor)
     {
         this.actor = actor;
-    }
-
-    public Long getStorySets()
-    {
-        return storySets;
-    }
-
-    public void setStorySets(Long storySets)
-    {
-        this.storySets = storySets;
     }
 
     public String getDirectors()
@@ -325,84 +272,14 @@ public class Item implements java.io.Serializable
         this.directors = directors;
     }
 
-    public String getRole()
+    public String getActors()
     {
-        return role;
+        return actors;
     }
 
-    public void setRole(String role)
+    public void setActors(String actors)
     {
-        this.role = role;
-    }
-
-    public String getDub()
-    {
-        return dub;
-    }
-
-    public void setDub(String dub)
-    {
-        this.dub = dub;
-    }
-
-    public String getPublisher()
-    {
-        return publisher;
-    }
-
-    public void setPublisher(String publisher)
-    {
-        this.publisher = publisher;
-    }
-
-    public String getComposer()
-    {
-        return composer;
-    }
-
-    public void setComposer(String composer)
-    {
-        this.composer = composer;
-    }
-
-    public String getProductionDateString()
-    {
-        return productionDateString;
-    }
-
-    public void setProductionDateString(String productionDateString)
-    {
-        this.productionDateString = productionDateString;
-    }
-
-    public String getProductionCompany()
-    {
-        return productionCompany;
-    }
-
-    public void setProductionCompany(String productionCompany)
-    {
-        this.productionCompany = productionCompany;
-    }
-
-    public String getPermitCode()
-    {
-        return permitCode;
-    }
-
-    public void setPermitCode(String permitCode)
-    {
-        this.permitCode = permitCode;
-    }
-
-    public String getScreenwriter()
-    {
-        return screenwriter;
-    }
-
-    public void setScreenwriter(String screenwriter)
-    {
-        this.screenwriter = screenwriter;
+        this.actors = actors;
     }
 
     public String getProducer()
@@ -415,14 +292,74 @@ public class Item implements java.io.Serializable
         this.producer = producer;
     }
 
-    public Long getMovSets()
+    public String getDirector()
     {
-        return movSets;
+        return director;
     }
 
-    public void setMovSets(Long movSets)
+    public void setDirector(String director)
     {
-        this.movSets = movSets;
+        this.director = director;
+    }
+
+    public String getScreenwriter()
+    {
+        return screenwriter;
+    }
+
+    public void setScreenwriter(String screenwriter)
+    {
+        this.screenwriter = screenwriter;
+    }
+
+    public String getDub()
+    {
+        return dub;
+    }
+
+    public void setDub(String dub)
+    {
+        this.dub = dub;
+    }
+
+    public String getRole()
+    {
+        return role;
+    }
+
+    public void setRole(String role)
+    {
+        this.role = role;
+    }
+
+    public String getCompere()
+    {
+        return compere;
+    }
+
+    public void setCompere(String compere)
+    {
+        this.compere = compere;
+    }
+
+    public String getGuest()
+    {
+        return guest;
+    }
+
+    public void setGuest(String guest)
+    {
+        this.guest = guest;
+    }
+
+    public String getPublisher()
+    {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher)
+    {
+        this.publisher = publisher;
     }
 
     public String getPlayOnline()
@@ -433,26 +370,6 @@ public class Item implements java.io.Serializable
     public void setPlayOnline(String playOnline)
     {
         this.playOnline = playOnline;
-    }
-
-    public String getPublishTime()
-    {
-        return publishTime;
-    }
-
-    public void setPublishTime(String publishTime)
-    {
-        this.publishTime = publishTime;
-    }
-
-    public String getLyric()
-    {
-        return lyric;
-    }
-
-    public void setLyric(String lyric)
-    {
-        this.lyric = lyric;
     }
 
     public String getAlbum()
@@ -495,16 +412,6 @@ public class Item implements java.io.Serializable
         this.asIsrc = asIsrc;
     }
 
-    public String getSource()
-    {
-        return source;
-    }
-
-    public void setSource(String source)
-    {
-        this.source = source;
-    }
-
     public String getOperate()
     {
         return operate;
@@ -515,23 +422,35 @@ public class Item implements java.io.Serializable
         this.operate = operate;
     }
 
+    public String getWorktype()
+    {
+        return worktype;
+    }
+
+    public void setWorktype(String worktype)
+    {
+        this.worktype = worktype;
+    }
+
+    public static long getSerialversionuid()
+    {
+        return serialVersionUID;
+    }
+
     @Override
     public String toString()
     {
-        return "Item [id=" + id + ", name=" + name + ", assetCode=" + assetCode
+        return "Item [id=" + id + ", assetCode=" + assetCode + ", name=" + name
                 + ", asName=" + asName + ", foreignName=" + foreignName
-                + ", singer=" + singer + ", author=" + author + ", actor="
-                + actor + ", storySets=" + storySets + ", directors="
-                + directors + ", role=" + role + ", dub=" + dub
-                + ", publisher=" + publisher + ", composer=" + composer
-                + ", productionDateString=" + productionDateString
-                + ", productionCompany=" + productionCompany + ", permitCode="
-                + permitCode + ", screenwriter=" + screenwriter + ", producer="
-                + producer + ", movSets=" + movSets + ", playOnline="
-                + playOnline + ", publishTime=" + publishTime + ", lyric="
-                + lyric + ", album=" + album + ", tags=" + tags + ", types="
-                + types + ", asIsrc=" + asIsrc + ", source=" + source
-                + ", operate=" + operate + "]";
+                + ", singer=" + singer + ", author=" + author + ", composer="
+                + composer + ", actor=" + actor + ", directors=" + directors
+                + ", actors=" + actors + ", producer=" + producer
+                + ", director=" + director + ", screenwriter=" + screenwriter
+                + ", dub=" + dub + ", role=" + role + ", compere=" + compere
+                + ", guest=" + guest + ", publisher=" + publisher
+                + ", playOnline=" + playOnline + ", album=" + album + ", tags="
+                + tags + ", types=" + types + ", asIsrc=" + asIsrc
+                + ", operate=" + operate + ", worktype=" + worktype + "]";
     }
 
 }
