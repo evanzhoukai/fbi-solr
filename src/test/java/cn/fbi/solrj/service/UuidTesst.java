@@ -16,7 +16,8 @@ public class UuidTesst
     public static void main(String[] args) throws Exception
     {
         Random random = new Random();
-        long ra = random.nextLong();
+        int ra = random.nextInt(100);
+
         Long ll = System.currentTimeMillis();
         Long l = System.currentTimeMillis();
         System.out.println("=====开始========" + ll);
@@ -25,7 +26,6 @@ public class UuidTesst
         List<String> list = new ArrayList<String>();
         list.add("我");
         list.add("是");
-        list.add("周恺");
 
     }
 
